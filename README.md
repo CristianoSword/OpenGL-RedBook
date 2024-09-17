@@ -10,7 +10,7 @@
 ## Technologies 
 All topics studied and those on the list to study:
 
-|🕹 OpenGL                                                                   | 💾 | Comments (*Wild comments washed down with cheap wine* 🍷)       |         
+|🕹 OpenGL                                                                   | 💾 | Comments <br> (*Wild comments washed down with cheap wine* 🍷)  |         
 | ---------------------------------------------------------------------------| -- | -                                                               |   
 | 1. Introduction  *(pg 1-31)*                                               | ⏱ |                                                                 |            
 | 2. State Management and Drawing <br> Geometric Objects *(pg 31-123)*       | ❌ |                                                                 |
