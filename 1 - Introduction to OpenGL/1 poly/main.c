@@ -1,10 +1,31 @@
 #include <windows.h>
 #include <gl/gl.h>
+#include <math.h>
+
+#define PI 3.14159265358979323846
 
 LRESULT CALLBACK WindowProc(HWND, UINT, WPARAM, LPARAM);
 void EnableOpenGL(HWND hwnd, HDC*, HGLRC*);
 void DisableOpenGL(HWND, HDC, HGLRC);
 
+void DrawStar() {
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(1.0, 1.0, 0.0); // Amarelo
+
+    // Ponto central da estrela
+    glVertex3f(0.5, 0.5, 0.0);
+
+    // Vértices da estrela
+    for (int i = 0; i <= 10; i++) {
+        float angle = i * PI / 5.0;
+        float radius = (i % 2 == 0) ? 0.2 : 0.4;
+        float x = 0.5 + radius * cos(angle);
+        float y = 0.5 + radius * sin(angle);
+        glVertex3f(x, y, 0.0);
+    }
+
+    glEnd();
+}
 
 int WINAPI WinMain(HINSTANCE hInstance,
                    HINSTANCE hPrevInstance,
@@ -31,8 +52,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
     wcex.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH);
     wcex.lpszMenuName = NULL;
     wcex.lpszClassName = "GLSample";
-    wcex.hIconSm = LoadIcon(NULL, IDI_APPLICATION);;
-
+    wcex.hIconSm = LoadIcon(NULL, IDI_APPLICATION);
 
     if (!RegisterClassEx(&wcex))
         return 0;
@@ -40,7 +60,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
     /* create main window */
     hwnd = CreateWindowEx(0,
                           "GLSample",
-                          "OpenGL Primeiro Programa - 17/9/2024 19:09",
+                          "OpenGL 2º Code - 17/09/2024 19:41",
                           WS_OVERLAPPEDWINDOW,
                           CW_USEDEFAULT,
                           CW_USEDEFAULT,
@@ -56,7 +76,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
     /* enable OpenGL for the window */
     EnableOpenGL(hwnd, &hDC, &hRC);
 
-     /* setup OpenGL viewport and projection */
+    /* setup OpenGL viewport and projection */
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
@@ -84,27 +104,16 @@ int WINAPI WinMain(HINSTANCE hInstance,
         {
             /* OpenGL animation code goes here */
 
-            glClearColor(0.0, 0.0, 0.0, 0.0);
+            glClearColor(0.5, 0.7, 1.0, 1.0);
             glClear(GL_COLOR_BUFFER_BIT);
-            glColor3f(1.0, 1.0, 1.0);
-            //glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
 
-            glBegin(GL_POLYGON);
+            DrawStar();
 
-                glVertex3f(0.25, 0.25, 0.0);
-                glVertex3f(0.75, 0.25, 0.0);
-                glVertex3f(0.75, 0.75, 0.0);
-                glVertex3f(0.25, 0.75, 0.0);
-
-            glEnd();
             glFlush();
-
-            //glPopMatrix();
-
             SwapBuffers(hDC);
 
             theta += 1.0f;
-            Sleep (1);
+            Sleep(1);
         }
     }
 
@@ -177,10 +186,9 @@ void EnableOpenGL(HWND hwnd, HDC* hDC, HGLRC* hRC)
     wglMakeCurrent(*hDC, *hRC);
 }
 
-void DisableOpenGL (HWND hwnd, HDC hDC, HGLRC hRC)
+void DisableOpenGL(HWND hwnd, HDC hDC, HGLRC hRC)
 {
     wglMakeCurrent(NULL, NULL);
     wglDeleteContext(hRC);
     ReleaseDC(hwnd, hDC);
 }
-
