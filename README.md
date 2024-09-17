@@ -1,4 +1,4 @@
-# OpenGL-RedBook - Study
+# OpenGL - RedBook
    
 <p>
 ❤🖤🖤🖤🖤🖤🖤🖤🖤🖤 &nbsp&nbsp&nbsp 1/100% 📚        
