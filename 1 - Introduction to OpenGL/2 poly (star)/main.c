@@ -15,7 +15,7 @@ void DrawStar() {
     // Ponto central da estrela
     glVertex3f(0.5, 0.5, 0.0);
 
-    // Vértices da estrela
+    // Vï¿½rtices da estrela
     for (int i = 0; i <= 10; i++) {
         float angle = i * PI / 5.0;
         float radius = (i % 2 == 0) ? 0.2 : 0.4;
@@ -61,7 +61,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
     /* create main window */
     hwnd = CreateWindowEx(0,
                           "GLSample",
-                          "OpenGL 2º Code - 17/09/2024 19:41",
+                          "OpenGL 2Âº Code - 17/09/2024 19:41",
                           WS_OVERLAPPEDWINDOW,
                           CW_USEDEFAULT,
                           CW_USEDEFAULT,
