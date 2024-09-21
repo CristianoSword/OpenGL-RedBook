@@ -64,15 +64,18 @@ int main(int argc, char** argv) {
     
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
-    glutInitWindowSize(250,250);
-    glutInitWindowPosition(100, 100);
+    glutInitWindowSize(512,512);
+    glutInitWindowPosition(200, 200);
     //glutCreateWindow("OpenGL 4*Code - 21/09/2024 11:41");
     glutCreateWindow(argv[0]);
     init();
 
+    // Registrando a função de display (callback)
     glutDisplayFunc(display);
+
     glutReshapeFunc(reshape);
     glutMouseFunc(mouse);    
+
     glutMainLoop();
     return 0;
 }
