@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "GL Build & Run",
             "type": "shell",
             "command": "g++",
             "args": [
@@ -20,10 +20,19 @@
             ],
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": false
             },
             "problemMatcher": ["$gcc"],
-            "detail": "Compiled by g++"
+            "detail": "Compile and run",
+            "dependsOn": ["runExecutable"]
+        },
+        {
+            "label": "runExecutable",
+            "type": "shell",
+            "command": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "group": {
+                "kind": "none"
+            }
         }
     ]
 }
