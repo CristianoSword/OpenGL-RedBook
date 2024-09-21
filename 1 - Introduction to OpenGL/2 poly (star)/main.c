@@ -22,6 +22,7 @@ void DrawStar() {
         float x = 0.5 + radius * cos(angle);
         float y = 0.5 + radius * sin(angle);
         glVertex3f(x, y, 0.0);
+        //sleep(120);
     }
 
     glEnd();
