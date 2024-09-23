@@ -1,7 +1,7 @@
 # OpenGL - RedBook
    
 <p>
-❤🖤🖤🖤🖤🖤🖤🖤🖤🖤 &nbsp&nbsp&nbsp 1/100% 📚        
+❤🖤🖤🖤🖤🖤🖤🖤🖤🖤 &nbsp&nbsp&nbsp 5/100% 📚        
 </p>         
 
 📕	 Repo for study of OpenGL graphics computer.<br>
@@ -12,8 +12,8 @@ All topics studied and those on the list to study:
 
 |🕹 OpenGL                                                                   | 💾 | Comments <br> (*Wild comments washed down with cheap wine* 🍷)  |         
 | ---------------------------------------------------------------------------| -- | -                                                               |   
-| 1. Introduction  *(pg 1-31)*                                               | ⏱ |                                                                 |            
-| 2. State Management and Drawing <br> Geometric Objects *(pg 31-123)*       | ❌ |                                                                 |
+| 1. Introduction  *(pg 1-31)*                                               | ✔  | *good introduction the api and general splanation*            |            
+| 2. State Management and Drawing <br> Geometric Objects *(pg 31-123)*       | ⏱ |                                                                 |
 | 3. Viewing *(pg 123-185)*                                                  | ❌ |                                                                 |
 | 4. Color *(pg 185-203)*                                                    | ❌ |                                                                 |
 | 5. Lighting *(pg 203-249)*                                                 | ❌ |                                                                 | 
