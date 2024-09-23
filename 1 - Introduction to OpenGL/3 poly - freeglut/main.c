@@ -12,7 +12,7 @@ void display() {
 
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
-    glutCreateWindow("Simple OpenGL Example");
+    glutCreateWindow("OpenGL 3*code - 20/09/2024 22:56");
     glutDisplayFunc(display);
     glutMainLoop();
     return 0;

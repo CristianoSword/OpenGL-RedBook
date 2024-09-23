@@ -1,8 +1,7 @@
 #include <GL/freeglut.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 // Double Buffered Rotating Square program
+// ERROR:  No display callback registered for window 1
 
 static GLfloat spin = 0.0;
 
@@ -18,6 +17,7 @@ void display() {
     glColor3f(1.0, 1.0, 1.0);
     glRectf(-25.0, -25.0, 25.0, 25.0);
     glPopMatrix();
+    
     glutSwapBuffers();
 
 }
@@ -64,14 +64,15 @@ int main(int argc, char** argv) {
     
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
-    glutInitWindowSize(512,512);
-    glutInitWindowPosition(200, 200);
-    //glutCreateWindow("OpenGL 4*Code - 21/09/2024 11:41");
-    glutCreateWindow(argv[0]);
+    glutInitWindowSize(400,400);
+    glutInitWindowPosition(100, 100);
+    glutCreateWindow("OpenGL 4*Code - 21/09/2024 11:41");
+    //glutCreateWindow(argv[0]);
     init();
 
     // Registrando a função de display (callback)
     glutDisplayFunc(display);
+    
 
     glutReshapeFunc(reshape);
     glutMouseFunc(mouse);    
