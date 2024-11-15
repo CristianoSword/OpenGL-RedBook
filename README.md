@@ -1,7 +1,7 @@
 # OpenGL - RedBook
    
 <p>
-❤🖤🖤🖤🖤🖤🖤🖤🖤🖤 &nbsp&nbsp&nbsp 5/100% 📚        
+❤❤🖤🖤🖤🖤🖤🖤🖤🖤 &nbsp&nbsp&nbsp 20/100% 📚        
 </p>         
 
 📕	 Repo for study of OpenGL graphics computer.<br>
