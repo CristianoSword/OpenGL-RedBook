@@ -4,7 +4,7 @@
 ❤❤🖤🖤🖤🖤🖤🖤🖤🖤 &nbsp&nbsp&nbsp 20/100% 📚📚      
 </p>         
 
-📕	 Repo for study of OpenGL graphics computer.<br>
+📕	 Repo for study of OpenGL graphics computer. Reading - RedBook 1.2/3.0/3.1 <br>
 👾  The magic of studying a little every day 👾 
 
 ## Technologies 
