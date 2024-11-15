@@ -57,8 +57,8 @@ int main(int argc, char **argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH); // Use double buffering and depth buffer
     glutInitWindowSize(600, 400); // Window size
-    glutCreateWindow("OpenGL 12*Code - GL Client State - 14/11/2024 23:42");
-    
+    glutCreateWindow("OpenGL 12*Code - Icosahedron - 14/11/2024 23:42");
+
     init();
     glutDisplayFunc(display); // Function to draw the object
     glutMainLoop(); // Start the main rendering loop
