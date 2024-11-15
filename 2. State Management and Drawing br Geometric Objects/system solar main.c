@@ -68,8 +68,9 @@ int main(int argc, char** argv) {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
 	glutInitWindowSize(1000, 700);
+    
 	glutInitWindowPosition(100, 010);
-	glutCreateWindow("Simple Solar System");
+	glutCreateWindow("Simple");
 	init();
 	glutDisplayFunc(display);
 	glutReshapeFunc(reshape);

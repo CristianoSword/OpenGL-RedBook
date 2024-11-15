@@ -15,7 +15,7 @@ void DrawStar() {
     // Ponto central da estrela
     glVertex3f(0.5, 0.5, 0.0);
 
-    // V�rtices da estrela
+    // Vertices da estrela
     for (int i = 0; i <= 10; i++) {
         float angle = i * PI / 5.0;
         float radius = (i % 2 == 0) ? 0.2 : 0.4;

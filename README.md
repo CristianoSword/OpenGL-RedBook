@@ -12,9 +12,9 @@ All topics studied and those on the list to study:
 
 |🕹 OpenGL                                                                   | 💾 | Comments <br> (*Wild comments washed down with cheap wine* 🍷)  |         
 | ---------------------------------------------------------------------------| -- | -                                                               |   
-| 1. Introduction  *(pg 1-31)*                                               | ✔  | *good introduction the api and general splanation*            |            
-| 2. State Management and Drawing <br> Geometric Objects *(pg 31-123)*       | ⏱ |                                                                 |
-| 3. Viewing *(pg 123-185)*                                                  | ❌ |                                                                 |
+| 1. Introduction  *(pg 1-31)*                                               | ✔  | *good introduction the api and general splanation*              |            
+| 2. State Management and Drawing <br> Geometric Objects *(pg 31-123)*       | ✔  | *principal diference is change states today for shaders, interesting from manipule states in arrays and textures*                                                                |
+| 3. Viewing *(pg 123-185)*                                                  | ⏱ |                                                                 |
 | 4. Color *(pg 185-203)*                                                    | ❌ |                                                                 |
 | 5. Lighting *(pg 203-249)*                                                 | ❌ |                                                                 | 
 | 6. Blending, Antialiasing, Fog, <br> and Polygon Offset *(pg 249-297)*     | ❌ |                                                                 |
@@ -34,6 +34,6 @@ All topics studied and those on the list to study:
 
 
 sub:<br>
-:heavy_check_mark: Completed <br>
-:stopwatch: Progress <br>
-:x: Not Started <br>
+✔  :heavy_check_mark: Completed <br>
+⏱ :stopwatch: Progress <br>
+❌ :x: Not Started <br>
