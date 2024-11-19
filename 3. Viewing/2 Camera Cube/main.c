@@ -53,7 +53,7 @@ int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(800, 600);
-    glutCreateWindow("gluLookAt Example");
+    glutCreateWindow("OpenGL 15*Code - Camera Cube - 18/11/2024 22:41");
 
     // Enable depth testing
     glEnable(GL_DEPTH_TEST);

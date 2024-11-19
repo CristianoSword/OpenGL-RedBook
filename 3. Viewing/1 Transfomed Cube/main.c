@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
 	glutInitWindowSize(500, 500);
     
 	glutInitWindowPosition(100, 010);
-    glutCreateWindow("OpenGL 13*Code - Transformed Cube - 15/11/2024 22:01");
+    glutCreateWindow("OpenGL 14*Code - Transformed Cube - 15/11/2024 22:01");
 
 	init();
 	glutDisplayFunc(display);
