@@ -70,7 +70,7 @@ int main(int argc, char** argv) {
 	glutInitWindowSize(1000, 700);
     
 	glutInitWindowPosition(100, 010);
-	glutCreateWindow("Simple");
+	glutCreateWindow("OpenGL 13*Code - System Solar - 18/11/2024 22:31");
 	init();
 	glutDisplayFunc(display);
 	glutReshapeFunc(reshape);
