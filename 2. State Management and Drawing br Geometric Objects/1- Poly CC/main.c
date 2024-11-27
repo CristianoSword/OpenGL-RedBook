@@ -1,52 +1,50 @@
-#include <GL/glut.h>  // Biblioteca GLUT para janelas e eventos
+#include <GL/glut.h>  // GLUT library for windows and events
 
-// Função para desenhar um polígono convexo (quadrado)
+// Function to draw a convex polygon (square)
 void desenhaPoligonoConvexo(void) {
-    // Desenhar um quadrado
+    // Draw a square
     glBegin(GL_POLYGON);
-        glVertex2f(-0.8f, -0.8f);  // Vértice inferior esquerdo
-        glVertex2f(-0.2f, -0.8f);  // Vértice inferior direito
-        glVertex2f(-0.2f, -0.2f);  // Vértice superior direito
-        glVertex2f(-0.8f, -0.2f);  // Vértice superior esquerdo
+        glVertex2f(-0.8f, -0.8f);  // Bottom-left vertex
+        glVertex2f(-0.2f, -0.8f);  // Bottom-right vertex
+        glVertex2f(-0.2f, -0.2f);  // Top-right vertex
+        glVertex2f(-0.8f, -0.2f);  // Top-left vertex
     glEnd();
 }
 
-// Função para desenhar um polígono não convexo (côncavo)
+// Function to draw a non-convex polygon (concave)
 void desenhaPoligonoNaoConvexo(void) {
-    // Desenhar uma forma côncava (estrela)
+    // Draw a concave shape (star)
     glBegin(GL_POLYGON);
-        glVertex2f(0.0f, 0.8f);   // Vértice superior
-        glVertex2f(0.2f, 0.2f);   // Vértice inferior direito
-        glVertex2f(0.8f, 0.2f);   // Ponto externo à direita
-        glVertex2f(0.3f, -0.2f);  // Vértice interno inferior direito
-        glVertex2f(0.5f, -0.8f);  // Ponto externo inferior
-        glVertex2f(0.0f, -0.4f);  // Ponto interno inferior central
-        glVertex2f(-0.5f, -0.8f); // Ponto externo inferior esquerdo
-        glVertex2f(-0.3f, -0.2f); // Vértice interno inferior esquerdo
-        glVertex2f(-0.8f, 0.2f);  // Ponto externo à esquerda
-        glVertex2f(-0.2f, 0.2f);  // Vértice inferior esquerdo
+        glVertex2f(0.0f, 0.8f);   // Top vertex
+        glVertex2f(0.2f, 0.2f);   // Bottom-right vertex
+        glVertex2f(0.8f, 0.2f);   // External right point
+        glVertex2f(0.3f, -0.2f);  // Inner bottom-right vertex
+        glVertex2f(0.5f, -0.8f);  // External bottom point
+        glVertex2f(0.0f, -0.4f);  // Inner central bottom point
+        glVertex2f(-0.5f, -0.8f); // External bottom-left point
+        glVertex2f(-0.3f, -0.2f); // Inner bottom-left vertex
+        glVertex2f(-0.8f, 0.2f);  // External left point
+        glVertex2f(-0.2f, 0.2f);  // Bottom-left vertex
     glEnd();
 }
 
-
-
-// Função de renderização
+// Rendering function
 void display(void) {
-    glClear(GL_COLOR_BUFFER_BIT);  // Limpa a tela
+    glClear(GL_COLOR_BUFFER_BIT);  // Clears the screen
 
-    // Desenhar o polígono convexo à esquerda
-    //desenhaPoligonoConvexo();
+    // Draw the convex polygon on the left
+    // desenhaPoligonoConvexo();
 
-    // Desenhar o polígono não convexo à direita
+    // Draw the non-convex polygon on the right
     desenhaPoligonoNaoConvexo();
 
-    glFlush();  // Garante a execução dos comandos de desenho
+    glFlush();  // Ensures that the drawing commands are executed
 }
 
 int main(int argc, char** argv) {
-    glutInit(&argc, argv);  // Inicializa GLUT
-    glutCreateWindow("OpenGL 6*Code - Poly no Convex- 27/09/2024 22:59");  // Cria uma janela
-    glutDisplayFunc(display);  // Função de renderização
-    glutMainLoop();  // Loop de eventos
+    glutInit(&argc, argv);  // Initializes GLUT
+    glutCreateWindow("OpenGL 6*Code - Poly no Convex- 27/09/2024 22:59");  // Creates a window
+    glutDisplayFunc(display);  // Rendering function
+    glutMainLoop();  // Event loop
     return 0;
 }

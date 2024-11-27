@@ -1,6 +1,8 @@
 #include <GL/glut.h>
 
+// Function to display the scene
 void display () {
+   // Define stipple patterns: "fly" and "halftone"
    GLubyte fly[] = {
       0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
       0x03, 0x80, 0x01, 0xC0, 0x06, 0xC0, 0x03, 0x60, 
@@ -28,59 +30,60 @@ void display () {
       0xAA, 0xAA, 0xAA, 0xAA, 0x55, 0x55, 0x55, 0x55,
       0xAA, 0xAA, 0xAA, 0xAA, 0x55, 0x55, 0x55, 0x55, 
       0xAA, 0xAA, 0xAA, 0xAA, 0x55, 0x55, 0x55, 0x55, 
-      0xAA, 0xAA, 0xAA, 0xAA, 0x55, 0x55, 0x55, 0x55,
       0xAA, 0xAA, 0xAA, 0xAA, 0x55, 0x55, 0x55, 0x55, 
       0xAA, 0xAA, 0xAA, 0xAA, 0x55, 0x55, 0x55, 0x55, 
       0xAA, 0xAA, 0xAA, 0xAA, 0x55, 0x55, 0x55, 0x55,
       0xAA, 0xAA, 0xAA, 0xAA, 0x55, 0x55, 0x55, 0x55, 
       0xAA, 0xAA, 0xAA, 0xAA, 0x55, 0x55, 0x55, 0x55, 
       0xAA, 0xAA, 0xAA, 0xAA, 0x55, 0x55, 0x55, 0x55,
+      0xAA, 0xAA, 0xAA, 0xAA, 0x55, 0x55, 0x55, 0x55, 
       0xAA, 0xAA, 0xAA, 0xAA, 0x55, 0x55, 0x55, 0x55};
 
-    glClear(GL_COLOR_BUFFER_BIT);
-    glColor3f(1.0, 1.0, 1.0);
-    // draw one solid, unstippled rectangle
-    // then two stippled rectangles
+    glClear(GL_COLOR_BUFFER_BIT);  // Clear the screen
+    glColor3f(1.0, 1.0, 1.0);      // Set color to white
+    // Draw a solid, unstippled rectangle
     glRectf(25.0, 25.0, 125.0, 125.0); 
 
-    glEnable(GL_POLYGON_STIPPLE);
-    glPolygonStipple(fly);
-    glRectf(125.0, 25.0, 225.0, 125.0);
+    glEnable(GL_POLYGON_STIPPLE);  // Enable polygon stippling
+    glPolygonStipple(fly);         // Set stipple pattern to "fly"
+    glRectf(125.0, 25.0, 225.0, 125.0);  // Draw rectangle with "fly" stipple
 
-    glPolygonStipple(halftone);
-    glRectf(225.0, 25.0, 325.0, 125.0);
+    glPolygonStipple(halftone);    // Set stipple pattern to "halftone"
+    glRectf(225.0, 25.0, 325.0, 125.0);  // Draw rectangle with "halftone" stipple
 
-    glPolygonStipple(fly);
-    glColor3f(1.0, 0.0, 0.0); //red
-    glRectf(325.0, 25.0, 425.0, 125.0);
+    glPolygonStipple(fly);         // Set stipple pattern back to "fly"
+    glColor3f(1.0, 0.0, 0.0);      // Change color to red
+    glRectf(325.0, 25.0, 425.0, 125.0);  // Draw red rectangle with "fly" stipple
     
-    glDisable(GL_POLYGON_STIPPLE);
-    glFlush();
+    glDisable(GL_POLYGON_STIPPLE); // Disable polygon stippling
+    glFlush();  // Flush the OpenGL pipeline, forcing the execution of all commands
 
 }
 
+// Initialization function
 void init (void) {
-    glClearColor(0.0, 0.0, 0.0, 0.0);
-    glShadeModel(GL_FLAT);
+    glClearColor(0.0, 0.0, 0.0, 0.0); // Set the background color to black
+    glShadeModel(GL_FLAT);  // Set shading model to flat shading
 }
 
+// Reshape function to adjust the viewport on window resizing
 void reshape (int w, int h)
 {
-   glViewport (0, 0, (GLsizei) w, (GLsizei) h);
-   glMatrixMode (GL_PROJECTION);
-   glLoadIdentity ();
-   gluOrtho2D (0.0, (GLdouble) w, 0.0, (GLdouble) h);
+   glViewport (0, 0, (GLsizei) w, (GLsizei) h);  // Set the viewport size
+   glMatrixMode (GL_PROJECTION);  // Set matrix mode to projection
+   glLoadIdentity ();  // Reset the projection matrix
+   gluOrtho2D (0.0, (GLdouble) w, 0.0, (GLdouble) h);  // Set an orthographic projection
 }
 
+// Main function where GLUT is initialized and the main loop is started
 int main(int argc, char** argv) {
-    glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
-    glutInitWindowSize(450, 150);
-    glutCreateWindow("OpenGL 10*Code - Poly Stippled - 12/11/2024 22:46");
-    init();
-    glutDisplayFunc(display);
-    glutReshapeFunc(reshape);
-    glutMainLoop();
+    glutInit(&argc, argv);  // Initialize GLUT
+    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);  // Set display mode (single buffer, RGB color)
+    glutInitWindowSize(450, 150);  // Set window size
+    glutCreateWindow("OpenGL 10*Code - Poly Stippled - 12/11/2024 22:46");  // Create window with title
+    init();  // Call the initialization function
+    glutDisplayFunc(display);  // Register the display function
+    glutReshapeFunc(reshape);  // Register the reshape function
+    glutMainLoop();  // Enter the GLUT main loop
     return 0;
-    
 }
