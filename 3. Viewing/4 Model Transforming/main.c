@@ -28,13 +28,14 @@ void display() {
     glEnable(GL_LINE_STIPPLE);  // Enable line stippling (dashed lines)
     glLineStipple(1, 0xF0F0);  // Set dash pattern (FOFO)
     glLoadIdentity();  // Reset the transformation matrix
-    glTranslatef(-2.0, 0.0, 0.0);  // Move the triangle to the left
+    glTranslatef(-3.0, 0.0, 0.0);  // Move the triangle to the left
     draw_triangle();  // Draw the dashed triangle
+
     glLineStipple(1, 0xF00F);  // Change dash pattern (FOOF)
 
     // Draw scaled triangle
     glLoadIdentity();  // Reset the transformation matrix
-    glScalef(1.5, 0.5, 1.0);  // Scale the triangle (stretch in X and compress in Y)
+    glScalef(5.5, 0.5, 1.0);  // Scale the triangle (stretch in X and compress in Y)
     draw_triangle();  // Draw the scaled triangle
 
     // Draw rotated triangle
