@@ -57,7 +57,7 @@ int main(int argc, char** argv)
    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
    glutInitWindowSize(500, 500); 
    glutInitWindowPosition(100, 100);
-   glutCreateWindow("OpenGL 15*Code - Camera Cube Rotation - 18/11/2024 22:51");
+   glutCreateWindow("OpenGL 16*Code - Camera Cube Rotation - 18/11/2024 22:51");
    init();
    glutDisplayFunc(display);
    glutReshapeFunc(reshape);
